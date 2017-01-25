@@ -6,7 +6,7 @@ header('Content-Type: text/html; charset=utf-8');
  * Date: 24/04/16
  * Time: 3:26 PM
  */
-$access_token = "EAAFqZBNHD9EUBAEka8OkDm3bX2x7w4QXKLEsgPz2fHEldWafW3iNmZCQ3zrz7zbYZAB3do08n5M5tZBm2PISqAPRTBKcSZCNRxYXWhXi6qxBMq8Uz2jQ1ET2Pg5eDmh9pfkFNgSfSZC8ZBeYBrRmaBBKaFAUZBe2V4jX0fMaZClIGlQZDZD";
+$access_token = "EAAFqZBNHD9EUBAFoflS7mNV1iaaTnCEPK3TwVUh0SmG9hIem7jDZAXYljsigkLry9AiyggCrByhD5y7qZCGuMSma4xvwZBeSBQhbTwENTDxHz4LmQXpKnfk2JbOXQ9vIrT82rAyF0FsuoBrhZBAhrZBKsgpXrgv44Hud9skAtvLQZDZD";
 $verify_token = "lpwr_bot";
 $hub_verify_token = null;
 if(isset($_REQUEST['hub_challenge'])) {
