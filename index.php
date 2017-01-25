@@ -6,8 +6,8 @@ header('Content-Type: text/html; charset=utf-8');
  * Date: 24/04/16
  * Time: 3:26 PM
  */
-$access_token = "EAAFiLqqrKJcBAJl3qCcn9fZAnujlQEhbXsROiW9xq336ZA8iOSMWhLPh1wZCpW9tZAjgDD25XPq10kWIZATkIWWJ8G0QRpSamjDiSI7ivoYobGdxMlztDRszonhXbkxcnXZBWKZAjj4CI0FUupk5ypHr3xAClcIARf0ngZAfCauGSgZDZD";
-$verify_token = "mju_library_bot";
+$access_token = "EAAFqZBNHD9EUBAEka8OkDm3bX2x7w4QXKLEsgPz2fHEldWafW3iNmZCQ3zrz7zbYZAB3do08n5M5tZBm2PISqAPRTBKcSZCNRxYXWhXi6qxBMq8Uz2jQ1ET2Pg5eDmh9pfkFNgSfSZC8ZBeYBrRmaBBKaFAUZBe2V4jX0fMaZClIGlQZDZD";
+$verify_token = "lpwr_bot";
 $hub_verify_token = null;
 if(isset($_REQUEST['hub_challenge'])) {
     $challenge = $_REQUEST['hub_challenge'];
@@ -23,26 +23,26 @@ $message_to_reply = '';
 /**
  * Some Basic rules to validate incoming messages
  */
-$getmessage = explode("#",$message);
+//$getmessage = explode("#",$message);
 //if(preg_match('RegisterLibraryAlert', $message)) {
     
-if("��Ѥú�ԡ������͹" == $getmessage[0]){ 
+if("สมัครบริการแจ้งเตือน" == $getmessage[0]){ 
  //   $stuid = $gmessage[1];
     // Make request to Time API
     //ini_set('user_agent','Mozilla/4.0 (compatible; MSIE 6.0)');
     //$result = file_get_contents("http://www.timeapi.org/utc/now?format=%25a%20%25b%20%25d%20%25I:%25M:%25S%20%25Y");
     //if($result != '') {
-    $message_to_reply = '�ͺ�س�����Ѥ����ԡ�� ��ҨФ���觢����Ţ�����ô�� ���س���Ѻ��Һ';
-     //   $message_to_reply = '�ͺ�س "'.$stuid.'" �����Ѥ����ԡ�� ��ҨФ���觢����Ţ�����ô�� ���س���Ѻ��Һ';
+    $message_to_reply = 'ขอบคุณที่สมัครใช้บริการ เราจะคอยส่งข้อมูลข่าวสารดีๆ ให้คุณได้รับทราบ';
+     //   $message_to_reply = '¢Íº¤Ø³ "'.$stuid.'" ·ÕèÊÁÑ¤ÃãªéºÃÔ¡ÒÃ àÃÒ¨Ð¤ÍÂÊè§¢éÍÁÙÅ¢èÒÇÊÒÃ´Õæ ãËé¤Ø³ä´éÃÑº·ÃÒº';
    //$message_to_reply = $getmessage[1];
     //}
 //} else {
   //  $message_to_reply = 'Test 55';
   //  $message_to_reply = 'Huh! what do you mean?';
-  //  $message_to_reply = '�������������öŧ����¹��';
+  //  $message_to_reply = '¢ÍÍÀÑÂäÁèÊÒÁÒÃ¶Å§·ÐàºÕÂ¹ä´é';
 }
 //API Url
-$url = 'https://graph.facebook.com/v2.6/me/messages?access_token='.$access_token;
+$url = 'https://graph.facebook.com/v2.8/me/messages?access_token='.$access_token;
 //Initiate cURL.
 $ch = curl_init($url);
 //The JSON data.
