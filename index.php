@@ -26,20 +26,10 @@ $message_to_reply = '';
 //$getmessage = explode("#",$message);
 //if(preg_match('RegisterLibraryAlert', $message)) {
     
-if("สมัครบริการแจ้งเตือน" == $getmessage[0]){ 
- //   $stuid = $gmessage[1];
-    // Make request to Time API
-    //ini_set('user_agent','Mozilla/4.0 (compatible; MSIE 6.0)');
-    //$result = file_get_contents("http://www.timeapi.org/utc/now?format=%25a%20%25b%20%25d%20%25I:%25M:%25S%20%25Y");
-    //if($result != '') {
+if("สมัครบริการแจ้งเตือน" == $message){ 
     $message_to_reply = 'ขอบคุณที่สมัครใช้บริการ เราจะคอยส่งข้อมูลข่าวสารดีๆ ให้คุณได้รับทราบ';
-     //   $message_to_reply = '¢Íº¤Ø³ "'.$stuid.'" ·ÕèÊÁÑ¤ÃãªéºÃÔ¡ÒÃ àÃÒ¨Ð¤ÍÂÊè§¢éÍÁÙÅ¢èÒÇÊÒÃ´Õæ ãËé¤Ø³ä´éÃÑº·ÃÒº';
-   //$message_to_reply = $getmessage[1];
-    //}
-//} else {
-  //  $message_to_reply = 'Test 55';
-  //  $message_to_reply = 'Huh! what do you mean?';
-  //  $message_to_reply = '¢ÍÍÀÑÂäÁèÊÒÁÒÃ¶Å§·ÐàºÕÂ¹ä´é';
+}else if("โปรแกรมการแข่งขัน" == $message){
+    $message_to_reply = 'สามารถติดตามได้ที่ \nhttp://lamphunwarrior.com/fixtures.php';
 }
 //API Url
 $url = 'https://graph.facebook.com/v2.8/me/messages?access_token='.$access_token;
